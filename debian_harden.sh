@@ -14,6 +14,12 @@ sys_upgrades() {
     apt-get --yes --force-yes autoclean
 }
 
+debian_security_packages(){
+   apt-get install --yes debsecan
+   apt-get install --yes fail2ban
+}
+
+
 unattended_upg() {
     # IMPORTANT - Unattended upgrades may cause issues
     # But it is known that the benefits are far more than
